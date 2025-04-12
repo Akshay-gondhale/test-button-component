@@ -26,7 +26,7 @@ export default {
     commonjs(),
     postcss({
       inject: true, // 👈 inject styles directly
-      modules: false,
+      modules: true,
     }),
     babel({
       exclude: "node_modules/**",
