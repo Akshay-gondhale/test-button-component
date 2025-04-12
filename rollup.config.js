@@ -3,7 +3,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
-import postcss from "rollup-plugin-postcss";
 export default {
   input: "src/index.js",
   output: [
@@ -24,10 +23,10 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    postcss({
-      inject: true, // 👈 inject styles directly
-      modules: false,
-    }),
+    // postcss({
+    //   inject: true, // 👈 inject styles directly
+    //   modules: false,
+    // }),
     babel({
       exclude: "node_modules/**",
       babelHelpers: "bundled",
