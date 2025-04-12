@@ -25,8 +25,8 @@ export default {
     resolve(),
     commonjs(),
     postcss({
-      inject: true, // 👈 inject styles directly
-      modules: true,
+      extract: "dist/styles.css", // Export CSS to a separate file
+      minimize: true,
     }),
     babel({
       exclude: "node_modules/**",
